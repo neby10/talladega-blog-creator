@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1 class="title">{% block title %} Users {% endblock %}</h1>
+    <div class="content">
+        {% for user in users %}
+            <div class="user">
+                <div>
+                    <div><b>#{{ user.user_id }}</b> - <b class="name">{{ user.username }}</b> </div>
+                </div>
+                <p class="name">
+                    <a href="{{ url_for('user', user_id=user.user_id)}}">
+                        {{ user.email }}
+                    </a>
+                </p>
+                <p>Joined: {{ user.create_at }}</p>
+                <div class="bio">
+                    <h4>Bio</h4>
+                    <p>{{ user.bio }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

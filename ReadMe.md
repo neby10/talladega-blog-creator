@@ -6,7 +6,7 @@ Created: May 2, 2023
 ## Description:
 This is a fully functional blog web application using Flask.
 The application allows users to create an account, log in, create, edit, and delete blog posts, and view posts from other users.
-I will also implemented features such as pagination, search, and authentication with password hashing.
+I will also implement features such as pagination, search, and authentication with password hashing.
 
 ## Skills Learned:
 

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div>
+        <h1>{% block title %} Welcome {{ user.username }} {% endblock %}</h1>
+        <p>{% block email %} email: {{ user.email }} {% endblock %}</p>
+        <p>{% block bio %} Bio: {{ user.bio }} {% endblock %}</p>
+        <p>{% block created_at %} Created At: {{ user.create_at }} {% endblock %}</p>
+    </div>
+{% endblock %}

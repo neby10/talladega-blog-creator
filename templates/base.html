@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Talladega - {% block title %} {% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href=""> -->
+        <style>
+            * {
+                /* margin: auto; */
+            }
+
+            .title {
+                margin: 5px;
+            }
+    
+            .content {
+                margin: 5px;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin-bottom: 0;
+            }
+    
+            .user {
+                flex: 20%;
+                padding: 10px;
+                margin: 5px;
+                background-color: #cccaca;
+                inline-size: 100%;
+            }
+    
+            .bio {
+                padding: 10px;
+                margin: 5px;
+                background-color: #ffffff;
+                color: #6c6f6e;
+            }
+    
+            .name a {
+                color: #466c25;
+                text-decoration: none;
+            }
+    
+            nav a {
+                color: rgb(23, 17, 139);
+                font-size: 3em;
+                margin-left: 50px;
+                text-decoration: none;
+            }
+            .footer {
+                text-align: center;
+                background-color: #3a3c3b;
+                color: rgb(225, 223, 223);
+                margin: 0;
+                padding: 0;
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="{{ url_for('index') }}">Talladega Blog Creator</a>
+            <a href="{{ url_for('create')}}">Create Account</a>
+            <a href="{{ url_for('login')}}">Log In</a>
+        </nav>
+        <div class="content">
+            {% block content %} {% endblock %}
+        </div>
+        <footer class="footer">
+            <p>This blog creator is a unique project meant for me to get my hands on some technologies I have not used before including
+                Python for web development, Flask, and SQLAlchemy. I also gained practice with authentication, authorization, front-end development, and web apps in general.
+            </p>
+        </footer>
+        <script src="" async defer></script>
+    </body>
+</html>
