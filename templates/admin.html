@@ -33,15 +33,49 @@
     </head>
     <body>
         <h1>Welcome to Admin Page!</h1>
+        <div class="create-user">
+            <form action="{{ url_for('create') }}" method="post">
+                <p>
+                    <label for="username">Username</label>
+                    <input type="text" name="username"
+                           placeholder="username"></input>
+                </p>
+                <p>
+                    <label for="email">Email</label>
+                    <input type="email" name="email"
+                           placeholder="email"></input>
+                </p>
+                <p>
+                    <label for="password">Password</label>
+                    <input type="text" name="password"
+                           placeholder="password"></input>
+                </p>
+                <p>
+                <label for="bio">Bio</label>
+                <br>
+                <textarea name="bio"
+                          placeholder="Bio"
+                          rows="15"
+                          cols="60"
+                          ></textarea>
+                </p>
+                <p>
+                    <button type="submit">Submit</button>
+                </p>
+            </form>
+        </div>
         <div class="users-container">
             {% for user in users %}
                 <div class="users-user">
-                    <p>Username: {{ user.username }}</p>
+                    <p>ID: {{ user.user_id }} Username: {{ user.username }}</p>
                     <p>Email: {{ user.email }}</p>
                     <p>Talladega Blogger since: {{ user.create_at }}</p>
+                    <p>Password is: {{ user.password }}</p>
                     <a href="{{ url_for('user', user_id=user.user_id)}}"><p>Go To Blog</p></a>
                     <p>Bio: {{ user.bio }}</p>
-                    <p>DELETE ACCOUNT</p>
+                    <form action="{{ url_for('delete_user', user_id=user.user_id) }}" method="POST">
+                        <button type="submit">DELETE ACCOUNT</button>
+                    </form>
                 </div>
             {% endfor %}
         </div>

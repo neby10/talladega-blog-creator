@@ -1,17 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
     <body>
-        <fieldset>
-            <legend>Log In</legend>
+        <form method="post">
+            <label>Log In</label>
             <p>
                 <label for="username">Enter Username</label>
-                <input type="text" id="username" placeholder="kevin3456">
+                <input type="text" name="username" placeholder="kevin3456">
             </p>
             <p>
                 <label for="password">Enter Password:</label>
-                <input type="text" id="password" placeholder="myblog1234567">
+                <input type="text" name="password" placeholder="myblog1234567">
             </p>
-        </fieldset>
+            <button type="submit">Log In</button>
+        </form>
         
         <script src="" async defer></script>
     </body>

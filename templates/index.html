@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1 class="title">{% block title %} Users {% endblock %}</h1>
     <div class="content">
-        {% for user in users %}
+        <h1>Talladega Blog Creator</h1>
+        <p></p>
+        <h1>Welcome, _user_goes_here_!</h1>
+        <!-- {% for user in users %}
             <div class="user">
                 <div>
                     <div><b>#{{ user.user_id }}</b> - <b class="name">{{ user.username }}</b> </div>
@@ -18,6 +20,6 @@
                     <p>{{ user.bio }}</p>
                 </div>
             </div>
-        {% endfor %}
+        {% endfor %} -->
     </div>
 {% endblock %}
